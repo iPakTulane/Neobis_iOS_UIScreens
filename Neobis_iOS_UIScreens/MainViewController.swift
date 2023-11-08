@@ -18,6 +18,20 @@ class MainViewController: UIViewController {
     
     func setupNavigationView() {
         
+        let backgroundImageView = UIImageView()
+        backgroundImageView.contentMode = .scaleAspectFill
+        if let backgroundImage = UIImage(named: "nature") {
+            backgroundImageView.image = backgroundImage
+        }
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
         view.backgroundColor = .systemBlue
         
         navigationController?.navigationBar.barTintColor = UIColor.blue

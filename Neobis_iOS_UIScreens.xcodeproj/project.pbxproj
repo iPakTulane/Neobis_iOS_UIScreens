@@ -16,6 +16,8 @@
 		BAE986402AFB8FC8003EF6FA /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9863F2AFB8FC8003EF6FA /* CryptoViewController.swift */; };
 		BAE986422AFB968F003EF6FA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE986412AFB968F003EF6FA /* WeatherViewController.swift */; };
 		BAE986442AFB96B8003EF6FA /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE986432AFB96B8003EF6FA /* TravelViewController.swift */; };
+		BAE986462AFBA1FA003EF6FA /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE986452AFBA1FA003EF6FA /* LibraryCollectionViewCell.swift */; };
+		BAE986482AFBA477003EF6FA /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE986472AFBA477003EF6FA /* LibraryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BAE9863F2AFB8FC8003EF6FA /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
 		BAE986412AFB968F003EF6FA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		BAE986432AFB96B8003EF6FA /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
+		BAE986452AFBA1FA003EF6FA /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAE986472AFBA477003EF6FA /* LibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE9863B2AFB8AB4003EF6FA /* LibraryViewController.swift */,
+				BAE986452AFBA1FA003EF6FA /* LibraryCollectionViewCell.swift */,
+				BAE986472AFBA477003EF6FA /* LibraryItem.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -200,6 +206,8 @@
 				BAE9863E2AFB8FB3003EF6FA /* FinanceViewController.swift in Sources */,
 				BAE9863C2AFB8AB4003EF6FA /* LibraryViewController.swift in Sources */,
 				BAE986402AFB8FC8003EF6FA /* CryptoViewController.swift in Sources */,
+				BAE986482AFBA477003EF6FA /* LibraryItem.swift in Sources */,
+				BAE986462AFBA1FA003EF6FA /* LibraryCollectionViewCell.swift in Sources */,
 				BACA7C712AFB3CEA006AAA9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
