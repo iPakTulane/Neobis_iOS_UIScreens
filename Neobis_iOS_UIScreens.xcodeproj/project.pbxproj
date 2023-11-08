@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		BACA7C712AFB3CEA006AAA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA7C702AFB3CEA006AAA9A /* AppDelegate.swift */; };
-		BACA7C752AFB3CEA006AAA9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA7C742AFB3CEA006AAA9A /* ViewController.swift */; };
+		BACA7C752AFB3CEA006AAA9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA7C742AFB3CEA006AAA9A /* MainViewController.swift */; };
 		BACA7C7A2AFB3CEB006AAA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA7C792AFB3CEB006AAA9A /* Assets.xcassets */; };
 		BACA7C7D2AFB3CEB006AAA9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA7C7B2AFB3CEB006AAA9A /* LaunchScreen.storyboard */; };
+		BAE9863C2AFB8AB4003EF6FA /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9863B2AFB8AB4003EF6FA /* LibraryViewController.swift */; };
+		BAE9863E2AFB8FB3003EF6FA /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9863D2AFB8FB3003EF6FA /* FinanceViewController.swift */; };
+		BAE986402AFB8FC8003EF6FA /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9863F2AFB8FC8003EF6FA /* CryptoViewController.swift */; };
+		BAE986422AFB968F003EF6FA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE986412AFB968F003EF6FA /* WeatherViewController.swift */; };
+		BAE986442AFB96B8003EF6FA /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE986432AFB96B8003EF6FA /* TravelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BACA7C6D2AFB3CEA006AAA9A /* Neobis_iOS_UIScreens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_UIScreens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA7C702AFB3CEA006AAA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BACA7C742AFB3CEA006AAA9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BACA7C742AFB3CEA006AAA9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BACA7C792AFB3CEB006AAA9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACA7C7C2AFB3CEB006AAA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BACA7C7E2AFB3CEB006AAA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE9863B2AFB8AB4003EF6FA /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		BAE9863D2AFB8FB3003EF6FA /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		BAE9863F2AFB8FC8003EF6FA /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		BAE986412AFB968F003EF6FA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		BAE986432AFB96B8003EF6FA /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +63,65 @@
 			isa = PBXGroup;
 			children = (
 				BACA7C702AFB3CEA006AAA9A /* AppDelegate.swift */,
-				BACA7C742AFB3CEA006AAA9A /* ViewController.swift */,
+				BACA7C742AFB3CEA006AAA9A /* MainViewController.swift */,
+				BAE9863A2AFB8676003EF6FA /* Main */,
+				BAE986352AFB8639003EF6FA /* Library */,
+				BAE986382AFB864C003EF6FA /* Finance */,
+				BAE986372AFB8649003EF6FA /* Crypto */,
+				BAE986362AFB8640003EF6FA /* Weather */,
+				BAE986392AFB8651003EF6FA /* Travel */,
 				BACA7C792AFB3CEB006AAA9A /* Assets.xcassets */,
 				BACA7C7B2AFB3CEB006AAA9A /* LaunchScreen.storyboard */,
 				BACA7C7E2AFB3CEB006AAA9A /* Info.plist */,
 			);
 			path = Neobis_iOS_UIScreens;
+			sourceTree = "<group>";
+		};
+		BAE986352AFB8639003EF6FA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9863B2AFB8AB4003EF6FA /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		BAE986362AFB8640003EF6FA /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				BAE986412AFB968F003EF6FA /* WeatherViewController.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		BAE986372AFB8649003EF6FA /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9863F2AFB8FC8003EF6FA /* CryptoViewController.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		BAE986382AFB864C003EF6FA /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				BAE9863D2AFB8FB3003EF6FA /* FinanceViewController.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		BAE986392AFB8651003EF6FA /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				BAE986432AFB96B8003EF6FA /* TravelViewController.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		BAE9863A2AFB8676003EF6FA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACA7C752AFB3CEA006AAA9A /* ViewController.swift in Sources */,
+				BACA7C752AFB3CEA006AAA9A /* MainViewController.swift in Sources */,
+				BAE986422AFB968F003EF6FA /* WeatherViewController.swift in Sources */,
+				BAE986442AFB96B8003EF6FA /* TravelViewController.swift in Sources */,
+				BAE9863E2AFB8FB3003EF6FA /* FinanceViewController.swift in Sources */,
+				BAE9863C2AFB8AB4003EF6FA /* LibraryViewController.swift in Sources */,
+				BAE986402AFB8FC8003EF6FA /* CryptoViewController.swift in Sources */,
 				BACA7C712AFB3CEA006AAA9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
