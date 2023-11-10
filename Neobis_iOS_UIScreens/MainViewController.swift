@@ -68,7 +68,8 @@ class MainViewController: UIViewController {
         
         let weatherButton = UIBarButtonItem(title: "Weather", style: .plain, target: self, action: #selector(showWeatherViewController))
         
-        navigationItem.rightBarButtonItems = [travelButton, weatherButton, financeButton, cryptoButton, libraryButton]
+        let buttonsArray = [weatherButton, travelButton, cryptoButton, financeButton, libraryButton]
+        navigationItem.rightBarButtonItems = buttonsArray
     }
     
     @objc func showLibraryViewController() {
