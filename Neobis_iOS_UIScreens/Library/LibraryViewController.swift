@@ -43,13 +43,13 @@ class LibraryViewController: UIViewController {
         return label
     }()
     
-    private lazy var outlineImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "libraryOutline"))
-        image.tintColor = .black
-        image.contentMode = .scaleAspectFit
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
-    }()
+//    private lazy var outlineImage: UIImageView = {
+//        let image = UIImageView(image: UIImage(named: "libraryOutline"))
+//        image.tintColor = .black
+//        image.contentMode = .scaleAspectFit
+//        image.translatesAutoresizingMaskIntoConstraints = false
+//        return image
+//    }()
     
     private lazy var searchImage: UIImageView = {
         let image = UIImageView(image: UIImage(named: "libraryMagnifier"))
@@ -72,6 +72,7 @@ class LibraryViewController: UIViewController {
         return collectionView
     }()
     
+    
     // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,12 +80,16 @@ class LibraryViewController: UIViewController {
         addSubviews()
         setupConstraints()
         setTabBarItems()
+        
+        if let navigationController = self.navigationController {
+            navigationController.navigationBar.tintColor = UIColor.black
+        }
     }
     
     func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(searchImage)
-        view.addSubview(outlineImage)
+//        view.addSubview(outlineImage)
         view.addSubview(libraryCollectionView)
     }
     
@@ -112,13 +117,13 @@ class LibraryViewController: UIViewController {
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             
-            outlineImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 26),
-            outlineImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 53),
-            outlineImage.heightAnchor.constraint(equalToConstant: 24),
-            outlineImage.widthAnchor.constraint(equalToConstant: 24),
+//            outlineImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 26),
+//            outlineImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 53),
+//            outlineImage.heightAnchor.constraint(equalToConstant: 24),
+//            outlineImage.widthAnchor.constraint(equalToConstant: 24),
             
             searchImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -19),
-            searchImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 53),
+            searchImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 65),
             searchImage.heightAnchor.constraint(equalToConstant: 24),
             searchImage.widthAnchor.constraint(equalToConstant: 24),
             

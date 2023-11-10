@@ -59,14 +59,19 @@ class MainViewController: UIViewController {
     func addNavigationButtons() {
         // Add navigation buttons to navigate to different view controllers
         let libraryButton = UIBarButtonItem(title: "Library", style: .plain, target: self, action: #selector(showLibraryViewController))
+        libraryButton.tintColor = .white
         
         let cryptoButton = UIBarButtonItem(title: "Crypto", style: .plain, target: self, action: #selector(showCryptoViewController))
+        cryptoButton.tintColor = .white
         
         let financeButton = UIBarButtonItem(title: "Finance", style: .plain, target: self, action: #selector(showFinanceViewController))
+        financeButton.tintColor = .white
         
         let travelButton = UIBarButtonItem(title: "Travel", style: .plain, target: self, action: #selector(showTravelViewController))
+        travelButton.tintColor = .white
         
         let weatherButton = UIBarButtonItem(title: "Weather", style: .plain, target: self, action: #selector(showWeatherViewController))
+        weatherButton.tintColor = .white
         
         let buttonsArray = [weatherButton, travelButton, cryptoButton, financeButton, libraryButton]
         navigationItem.rightBarButtonItems = buttonsArray

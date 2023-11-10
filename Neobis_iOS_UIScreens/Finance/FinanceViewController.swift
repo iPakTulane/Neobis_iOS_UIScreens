@@ -12,7 +12,9 @@ class FinanceViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        if let navigationController = self.navigationController {
+            navigationController.navigationBar.tintColor = UIColor.gray
+        }
     }
     
 
