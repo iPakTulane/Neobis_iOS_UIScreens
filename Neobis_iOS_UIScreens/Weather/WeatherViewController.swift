@@ -10,12 +10,12 @@ import UIKit
 class WeatherViewController: UIViewController {
 
     // Level 1
-    var currentWeatherHeaderView: UIView = {
+    private lazy var currentWeatherHeaderView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    var headerLocationImage: UIImageView = {
+    private lazy var headerLocationImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherLocation")
         image.tintColor = .white
@@ -23,7 +23,7 @@ class WeatherViewController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-    var headerCityNameLabel: UILabel = {
+    private lazy var headerCityNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Tashkent"
         label.font = UIFont.systemFont(ofSize: 25)
@@ -31,7 +31,7 @@ class WeatherViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    var headerArrowDownImage: UIImageView = {
+    private lazy var headerArrowDownImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherArrowDownWhite")
         image.tintColor = .white
@@ -39,7 +39,7 @@ class WeatherViewController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-    var headerNotificationImage: UIImageView = {
+    private lazy var headerNotificationImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherRingbellWhite")
         image.tintColor = .white
@@ -49,7 +49,7 @@ class WeatherViewController: UIViewController {
     }()
     
     // Level 2
-    var currentWeatherImage: UIImageView = {
+    private lazy var currentWeatherImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherSun")
         image.tintColor = .white
@@ -59,7 +59,7 @@ class WeatherViewController: UIViewController {
     }()
     
     // Level 3
-    var currentWeatherContainerView: UIView = {
+    private lazy var currentWeatherContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.3)
         view.layer.borderWidth = 2
@@ -68,7 +68,7 @@ class WeatherViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    var containerDateLabel: UILabel = {
+    private lazy var containerDateLabel: UILabel = {
         let label = UILabel()
         label.text = "    Today, 26 April"
         label.font = UIFont.systemFont(ofSize: 20)
@@ -76,7 +76,7 @@ class WeatherViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    var containerTemperatureLabel: UILabel = {
+    private lazy var containerTemperatureLabel: UILabel = {
         let label = UILabel()
         label.text = "  22°"
         label.font = UIFont.boldSystemFont(ofSize: 70.0)
@@ -84,7 +84,7 @@ class WeatherViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    var containerSummaryLabel: UILabel = {
+    private lazy var containerSummaryLabel: UILabel = {
         let label = UILabel()
         label.text = "  Sunny"
         label.font = UIFont.boldSystemFont(ofSize: 30.0)
@@ -94,12 +94,12 @@ class WeatherViewController: UIViewController {
     }()
     
     // Sublevel 3.1
-    var subContainerWindView: UIView = {
+    private lazy var subContainerWindView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    var windIconImage: UIImageView = {
+    private lazy var windIconImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherWind")
         image.tintColor = .white
@@ -107,7 +107,7 @@ class WeatherViewController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-    var windInfoLabel: UILabel = {
+    private lazy var windInfoLabel: UILabel = {
         let label = UILabel()
         label.text = "   Wind | 15 km/h"
         label.font = UIFont.systemFont(ofSize: 20)
@@ -117,12 +117,12 @@ class WeatherViewController: UIViewController {
     }()
     
     // Sublevel 3.2
-    var subContainerRainView: UIView = {
+    private lazy var subContainerRainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    var rainIconImage: UIImageView = {
+    private lazy var rainIconImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherRain")
         image.tintColor = .white
@@ -130,7 +130,7 @@ class WeatherViewController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-    var rainInfoLabel: UILabel = {
+    private lazy var rainInfoLabel: UILabel = {
         let label = UILabel()
         label.text = "Rain | 26%"
         label.font = UIFont.systemFont(ofSize: 20)
@@ -140,7 +140,7 @@ class WeatherViewController: UIViewController {
     }()
     
     // Level 4
-    var detailsButton: UIButton = {
+    private lazy var detailsButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .white
         button.layer.cornerRadius = 20
@@ -151,7 +151,7 @@ class WeatherViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    var detailsLabel: UILabel = {
+    private lazy var detailsLabel: UILabel = {
         let label = UILabel()
         label.text = "Weekly forecast"
         label.font = UIFont.systemFont(ofSize: 15)
@@ -159,7 +159,7 @@ class WeatherViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    var detailsImage: UIImageView = {
+    private lazy var detailsImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherArrowUpGray")
         image.tintColor = .systemGray
@@ -168,7 +168,7 @@ class WeatherViewController: UIViewController {
         return image
     }()
     
-    // MARK: -
+    // MARK: - Gradient
     private lazy var gradientLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
         return gradient
@@ -179,11 +179,13 @@ class WeatherViewController: UIViewController {
     // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
         setupViewsHierarchy()
         setupViewsConstraints()
-        addAction()
+        addActionToDetailsButton()
         setupGradients()
+        if let navigationController = self.navigationController {
+            navigationController.navigationBar.tintColor = UIColor.white
+        }
     }
 
     
@@ -225,7 +227,7 @@ class WeatherViewController: UIViewController {
         // MARK: - currentWeatherHeaderView
         NSLayoutConstraint.activate([
             // currentWeatherHeaderView
-            currentWeatherHeaderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            currentWeatherHeaderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
             currentWeatherHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             currentWeatherHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             currentWeatherHeaderView.heightAnchor.constraint(equalToConstant: 75),
@@ -336,26 +338,6 @@ class WeatherViewController: UIViewController {
         ])
     }
     
-    func addAction() {
-        
-    }
-    
-//    func setupGradients() {
-//        containerViewGradient.frame = currentWeatherContainerView.bounds
-//        containerViewGradient.colors = [UIColor(hex: "#FFFFFFB2", alpha: 0.7), UIColor(hex: "#BFBFBFB2", alpha: 0.7)]
-//        containerViewGradient.startPoint = CGPoint(x: 0.5, y: 0.5)
-//        view.layer.insertSublayer(gradientLayer, at: 0)
-//    }
-//    
-//    func setupGradients() {
-//        containerViewGradient.frame = currentWeatherContainerView.bounds
-//        let startColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.7)
-//        let endColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 0.7)
-//        containerViewGradient.colors = [startColor.cgColor, endColor.cgColor]
-//        containerViewGradient.startPoint = CGPoint(x: 0.5, y: 0.5)
-//        view.layer.insertSublayer(gradientLayer, at: 0)
-//    }
-    
     private func setupGradients() {
         gradientLayer.frame = view.bounds
         let startColor1 = UIColor(red: 0 / 255, green: 190 / 255, blue: 229 / 255, alpha: 1)
@@ -372,6 +354,14 @@ class WeatherViewController: UIViewController {
         containerViewGradient.startPoint = CGPoint(x: 0.5, y: 0.5)
         view.layer.insertSublayer(containerViewGradient, at: 0)
     }
-
     
+    func addActionToDetailsButton() {
+        detailsButton.addTarget(self, action: #selector(detailsButtonPressed), for: .touchUpInside)
+    }
+    
+
+    @objc func detailsButtonPressed() {
+        let detailsWeatherViewController = DetailsWeatherViewController()
+        self.navigationController?.pushViewController(detailsWeatherViewController, animated: true)
+    }
 }

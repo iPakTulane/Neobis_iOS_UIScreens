@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeeklyWeather {
+struct WeeklyWeatherItem {
     let date: String
     let image: String
     let temperature: String

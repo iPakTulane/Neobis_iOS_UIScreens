@@ -52,7 +52,8 @@ class LibraryViewController: UIViewController {
 //    }()
     
     private lazy var searchImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "libraryMagnifier"))
+        let image = UIImageView()
+        image.image = UIImage(named: "libraryMagnifier")
         image.tintColor = .black
         image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false

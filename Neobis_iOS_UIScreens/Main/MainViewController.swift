@@ -10,10 +10,56 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "  Neobis UI Screens"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = 
+                    """
+                    This app combines a collection of UI screens created in code, as lined up above.
+                    
+                    This project focuses on building complex, custom screens in iOS without using Storyboard.
+                    
+                    The goal is to showcase proficiency in Swift programming and layout design using programmatic methods.
+                    """
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationView()
         addNavigationButtons()
+        setupLabels()
+    }
+    
+    func setupLabels() {
+        view.addSubview(titleLabel)
+        view.addSubview(descriptionLabel)
+        
+        NSLayoutConstraint.activate([
+            // titleLabel
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 130),
+            titleLabel.heightAnchor.constraint(equalToConstant: 40),
+            titleLabel.widthAnchor.constraint(equalToConstant: 200),
+
+            // descriptionLabel
+            descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 50),
+            descriptionLabel.widthAnchor.constraint(equalToConstant: 300),
+        ])
     }
     
     func setupNavigationView() {
@@ -37,37 +83,20 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.blue
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
-        
-        
-//        let navigationLabel = UILabel()
-//        navigationLabel.text =
-//                    """
-//                    Neobis_iOS_UIScreens
-//                    This app combines a collection of UI screens created in code, as lined up above.
-//                    This project focuses on building complex, custom screens in iOS without using Storyboard.
-//                    The goal is to showcase proficiency in Swift programming and layout design using programmatic methods.
-//                    """
-//        navigationLabel.numberOfLines = 0
-//        navigationLabel.textAlignment = .left
-//        navigationLabel.textColor = .white
-//        navigationLabel.translatesAutoresizingMaskIntoConstraints = false
-//        navigationLabel.frame = CGRect(x: 0, y: 100, width: view.frame.width, height: 40)
-//        view.addSubview(navigationLabel)
-        
     }
     
     func addNavigationButtons() {
         // Add navigation buttons to navigate to different view controllers
-        let libraryButton = UIBarButtonItem(title: "Library", style: .plain, target: self, action: #selector(showLibraryViewController))
+        let libraryButton = UIBarButtonItem(title: "Library |", style: .plain, target: self, action: #selector(showLibraryViewController))
         libraryButton.tintColor = .white
         
-        let cryptoButton = UIBarButtonItem(title: "Crypto", style: .plain, target: self, action: #selector(showCryptoViewController))
+        let cryptoButton = UIBarButtonItem(title: "Crypto |", style: .plain, target: self, action: #selector(showCryptoViewController))
         cryptoButton.tintColor = .white
         
-        let financeButton = UIBarButtonItem(title: "Finance", style: .plain, target: self, action: #selector(showFinanceViewController))
+        let financeButton = UIBarButtonItem(title: "Finance |", style: .plain, target: self, action: #selector(showFinanceViewController))
         financeButton.tintColor = .white
         
-        let travelButton = UIBarButtonItem(title: "Travel", style: .plain, target: self, action: #selector(showTravelViewController))
+        let travelButton = UIBarButtonItem(title: "Travel |", style: .plain, target: self, action: #selector(showTravelViewController))
         travelButton.tintColor = .white
         
         let weatherButton = UIBarButtonItem(title: "Weather", style: .plain, target: self, action: #selector(showWeatherViewController))

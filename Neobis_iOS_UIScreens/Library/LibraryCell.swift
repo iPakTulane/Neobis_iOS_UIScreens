@@ -10,14 +10,14 @@ import UIKit
 class LibraryCell: UICollectionViewCell {
     
     // MARK: - Views
-    var cellTitleLabel: UILabel = {
+    private lazy var cellTitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 25.0)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    var cellDescriptionLabel: UILabel = {
+    private lazy var cellDescriptionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14.0)
         label.numberOfLines = 0
@@ -25,7 +25,7 @@ class LibraryCell: UICollectionViewCell {
         return label
     }()
     
-    var cellLogoImage: UIImageView = {
+    private lazy var cellLogoImage: UIImageView = {
         let image = UIImageView()
         image.tintColor = .black
         image.contentMode = .scaleAspectFit
@@ -33,7 +33,7 @@ class LibraryCell: UICollectionViewCell {
         return image
     }()
     
-    var cellArrowImage: UIImageView = {
+    private lazy var cellArrowImage: UIImageView = {
         let image = UIImageView()
         image.tintColor = .black
         image.contentMode = .scaleAspectFit

@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct HourlyWeather {
+struct HourlyWeatherItem {
     let temperature: String
     let image: String
     let time: String
+    let isSelected: Bool
 }
