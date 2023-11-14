@@ -63,14 +63,6 @@ class LibraryViewController: UIViewController {
         return label
     }()
     
-//    private lazy var outlineImage: UIImageView = {
-//        let image = UIImageView(image: UIImage(named: "libraryOutline"))
-//        image.tintColor = .black
-//        image.contentMode = .scaleAspectFit
-//        image.translatesAutoresizingMaskIntoConstraints = false
-//        return image
-//    }()
-    
     private lazy var searchImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "libraryMagnifier")
@@ -110,7 +102,6 @@ class LibraryViewController: UIViewController {
     func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(searchImage)
-//        view.addSubview(outlineImage)
         view.addSubview(libraryCollectionView)
     }
     
@@ -137,11 +128,6 @@ class LibraryViewController: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-            
-//            outlineImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 26),
-//            outlineImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 53),
-//            outlineImage.heightAnchor.constraint(equalToConstant: 24),
-//            outlineImage.widthAnchor.constraint(equalToConstant: 24),
             
             searchImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -19),
             searchImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 65),

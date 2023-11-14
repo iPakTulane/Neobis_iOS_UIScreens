@@ -80,8 +80,6 @@ class TravelTableViewCell: UITableViewCell {
             // backgroundImage
             backgroundImage.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             backgroundImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-//            backgroundImage.topAnchor.constraint(equalTo: contentView.topAnchor),
-//            backgroundImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             backgroundImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             backgroundImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             

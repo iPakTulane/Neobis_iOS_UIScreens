@@ -40,14 +40,6 @@ class DetailsWeatherViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-//    private lazy var headerBackButton: UIButton = {
-//        let button = UIButton()
-//        button.backgroundColor = .clear
-//        button.setTitle("Back", for: .normal)
-//        button.setImage(UIImage(named: "weatherArrowLeftWhite"), for: .normal)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        return button
-//    }()
     private lazy var headerGearImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "weatherGearWhite")
@@ -88,8 +80,6 @@ class DetailsWeatherViewController: UIViewController {
         layout.minimumLineSpacing = 8
         layout.itemSize = CGSize(width: (UIScreen.main.bounds.width * 70 / 414.0), height: 155)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
         collectionView.register(HourlyWeatherCollectionViewCell.self, forCellWithReuseIdentifier: "HourlyWeatherCollectionViewCell")
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
@@ -172,7 +162,6 @@ class DetailsWeatherViewController: UIViewController {
         collectionView.dataSource = self
         setupViewsHierarchy()
         setupViewsConstraints()
-//        addActionToBackButton()
         setupGradients()
     }
     
@@ -214,10 +203,6 @@ class DetailsWeatherViewController: UIViewController {
             detailsWeatherHeaderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             detailsWeatherHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             detailsWeatherHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            
-//            // headerBackButton
-//            headerBackButton.centerYAnchor.constraint(equalTo: detailsWeatherHeaderView.centerYAnchor),
-//            headerBackButton.leadingAnchor.constraint(equalTo: detailsWeatherHeaderView.leadingAnchor),
             
             // headerGearImage
             headerGearImage.centerYAnchor.constraint(equalTo: detailsWeatherHeaderView.centerYAnchor),
@@ -295,10 +280,7 @@ class DetailsWeatherViewController: UIViewController {
             footerTitleLabel.trailingAnchor.constraint(equalTo: footerView.trailingAnchor),
         ])
     }
-    
-//    func addActionToBackButton() {
-//        headerBackButton.addTarget(self, action: #selector(BackButtonPressed), for: .touchUpInside)
-//    }
+
     
     @objc func BackButtonPressed() {
         dismiss(animated: true)

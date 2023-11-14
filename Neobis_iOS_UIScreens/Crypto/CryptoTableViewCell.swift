@@ -12,15 +12,12 @@ class CryptoTableViewCell: UITableViewCell {
     // MARK: -
     private lazy var cellContainerView: UIView = {
         let view = UIView()
-//        view.backgroundColor = .clear
-//        view.tintColor = .separator
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     private lazy var subcontainerLogoBackgroundView: UIView = {
         let view = UIView()
         view.alpha = 0.1
-//        view.clipsToBounds = true
         view.layer.cornerRadius = 20
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -29,23 +26,10 @@ class CryptoTableViewCell: UITableViewCell {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
-        
-//        // Apply a brightness filter to the image
-//        if let originalImage = image.image {
-//            let brightnessFilter = CIFilter(name: "CIColorControls")
-//            brightnessFilter?.setDefaults()
-//            brightnessFilter?.setValue(originalImage, forKey: kCIInputImageKey)
-//            brightnessFilter?.setValue(1.5, forKey: kCIInputBrightnessKey) // Adjust the value as needed
-//
-//            if let brightenedImage = brightnessFilter?.outputImage {
-//                image.image = UIImage(ciImage: brightenedImage)
-//            }
-//        }
         return image
     }()
     private lazy var subcontainerDetailLabelsView: UIView = {
         let view = UIView()
-//        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -93,13 +77,10 @@ class CryptoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     // MARK: -
@@ -111,7 +92,6 @@ class CryptoTableViewCell: UITableViewCell {
         cellContainerView.addSubview(subcontainerDetailLabelsView)
         
         cellContainerView.addSubview(subcontainerLogoImage)
-//        subcontainerLogoBackgroundView.addSubview(subcontainerLogoImage)
         
         subcontainerDetailLabelsView.addSubview(subcontainerTitleLabel)
         subcontainerDetailLabelsView.addSubview(subcontainerSubtitleLabel)
@@ -143,9 +123,6 @@ class CryptoTableViewCell: UITableViewCell {
         // subcontainerLogoImage
             subcontainerLogoImage.centerYAnchor.constraint(equalTo: cellContainerView.centerYAnchor),
             subcontainerLogoImage.leadingAnchor.constraint(equalTo: cellContainerView.leadingAnchor, constant: 10),
-            
-//            subcontainerLogoImage.centerXAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerXAnchor),
-//            subcontainerLogoImage.centerYAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerYAnchor),
             subcontainerLogoImage.widthAnchor.constraint(equalToConstant: 20),
             subcontainerLogoImage.heightAnchor.constraint(equalToConstant: 20),
         ])

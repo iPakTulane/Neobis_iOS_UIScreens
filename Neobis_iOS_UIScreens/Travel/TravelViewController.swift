@@ -42,23 +42,6 @@ class TravelViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-//    private lazy var searchBar: UISearchBar = {
-//        let searchBar = UISearchBar()
-//        searchBar.placeholder = "Choose your destination"
-//        searchBar.delegate = self
-//        searchBar.showsCancelButton = false
-//        searchBar.isTranslucent = true
-//        searchBar.layer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-////        searchBar.barStyle = .default
-////        searchBar.searchBarStyle = .default
-////        searchBar.tintColor = .blue
-//////        searchBar.barTintColor = .clear
-////        searchBar.backgroundColor = .clear
-//        searchBar.setImage(UIImage(named: "travelSearch"), for: .search, state: .normal)
-//        searchBar.translatesAutoresizingMaskIntoConstraints = false
-//        return searchBar
-//    }()
-    
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Choose your destination"
