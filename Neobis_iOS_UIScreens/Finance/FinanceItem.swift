@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 struct FinanceItem {
     let background: String

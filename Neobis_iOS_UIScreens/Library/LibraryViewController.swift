@@ -33,6 +33,26 @@ class LibraryViewController: UIViewController {
             description: "Discover the wonders of the world and explore different landscapes.",
             image: "libraryGlobus",
             isOdd: false),
+        LibraryItem(
+            title: "Magazines",
+            description: "Explore the latest issues and trends in various magazines.",
+            image: "libraryBook",
+            isOdd: true),
+        LibraryItem(
+            title: "Mathematics",
+            description: "Dive into the world of numbers, equations, and mathematical concepts.",
+            image: "libraryBookshelf",
+            isOdd: false),
+        LibraryItem(
+            title: "Manga",
+            description: "Immerse yourself in captivating manga stories and art.",
+            image: "libraryDiploma",
+            isOdd: true),
+        LibraryItem(
+            title: "Geography",
+            description: "Discover the wonders of the world and explore different landscapes.",
+            image: "libraryGlobus",
+            isOdd: false),
     ]
     
     private lazy var titleLabel: UILabel = {
@@ -62,8 +82,8 @@ class LibraryViewController: UIViewController {
     
     private lazy var libraryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 15
+        layout.minimumLineSpacing = 15
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         collectionView.register(LibraryCell.self, forCellWithReuseIdentifier: "LibraryCell")
@@ -128,8 +148,8 @@ class LibraryViewController: UIViewController {
             searchImage.heightAnchor.constraint(equalToConstant: 24),
             searchImage.widthAnchor.constraint(equalToConstant: 24),
             
-            libraryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            libraryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            libraryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            libraryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             libraryCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
             libraryCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])

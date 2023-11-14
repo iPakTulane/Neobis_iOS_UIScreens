@@ -18,7 +18,6 @@
 		BA22A53F2B0238710098D0DB /* FinanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22A53E2B0238710098D0DB /* FinanceTableViewCell.swift */; };
 		BA22A5412B0238C60098D0DB /* FinanceTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22A5402B0238C60098D0DB /* FinanceTabBarController.swift */; };
 		BA22A5432B02393F0098D0DB /* FinanceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22A5422B02393F0098D0DB /* FinanceItem.swift */; };
-		BA22A5452B0244810098D0DB /* FinanceTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA22A5442B0244810098D0DB /* FinanceTerm.swift */; };
 		BAAA58832AFD2C7800E7CDD0 /* LibraryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA58822AFD2C7800E7CDD0 /* LibraryTabBarController.swift */; };
 		BACA7C712AFB3CEA006AAA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA7C702AFB3CEA006AAA9A /* AppDelegate.swift */; };
 		BACA7C752AFB3CEA006AAA9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA7C742AFB3CEA006AAA9A /* MainViewController.swift */; };
@@ -45,7 +44,6 @@
 		BA22A53E2B0238710098D0DB /* FinanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTableViewCell.swift; sourceTree = "<group>"; };
 		BA22A5402B0238C60098D0DB /* FinanceTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTabBarController.swift; sourceTree = "<group>"; };
 		BA22A5422B02393F0098D0DB /* FinanceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceItem.swift; sourceTree = "<group>"; };
-		BA22A5442B0244810098D0DB /* FinanceTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTerm.swift; sourceTree = "<group>"; };
 		BAAA58822AFD2C7800E7CDD0 /* LibraryTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTabBarController.swift; sourceTree = "<group>"; };
 		BACA7C6D2AFB3CEA006AAA9A /* Neobis_iOS_UIScreens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_UIScreens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA7C702AFB3CEA006AAA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				BA22A53E2B0238710098D0DB /* FinanceTableViewCell.swift */,
 				BA22A5402B0238C60098D0DB /* FinanceTabBarController.swift */,
 				BA22A5422B02393F0098D0DB /* FinanceItem.swift */,
-				BA22A5442B0244810098D0DB /* FinanceTerm.swift */,
 			);
 			path = Finance;
 			sourceTree = "<group>";
@@ -247,7 +244,6 @@
 				BA22A5432B02393F0098D0DB /* FinanceItem.swift in Sources */,
 				BA22A5332AFE31540098D0DB /* WeeklyWeather.swift in Sources */,
 				BA22A5372AFE31C60098D0DB /* WeeklyWeatherTableViewCell.swift in Sources */,
-				BA22A5452B0244810098D0DB /* FinanceTerm.swift in Sources */,
 				BAE986442AFB96B8003EF6FA /* TravelViewController.swift in Sources */,
 				BAAA58832AFD2C7800E7CDD0 /* LibraryTabBarController.swift in Sources */,
 				BA22A53D2B01ED8C0098D0DB /* CryptoTableViewCell.swift in Sources */,

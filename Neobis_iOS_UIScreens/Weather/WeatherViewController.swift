@@ -70,7 +70,8 @@ class WeatherViewController: UIViewController {
     }()
     private lazy var containerDateLabel: UILabel = {
         let label = UILabel()
-        label.text = "    Today, 26 April"
+        label.text = "Today, 26 April"
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +79,8 @@ class WeatherViewController: UIViewController {
     }()
     private lazy var containerTemperatureLabel: UILabel = {
         let label = UILabel()
-        label.text = "  22°"
+        label.text = "22°"
+        label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 70.0)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +88,8 @@ class WeatherViewController: UIViewController {
     }()
     private lazy var containerSummaryLabel: UILabel = {
         let label = UILabel()
-        label.text = "  Sunny"
+        label.text = "Sunny"
+        label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 30.0)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -109,7 +112,8 @@ class WeatherViewController: UIViewController {
     }()
     private lazy var windInfoLabel: UILabel = {
         let label = UILabel()
-        label.text = "   Wind | 15 km/h"
+        label.text = "Wind | 15 km/h"
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -133,6 +137,7 @@ class WeatherViewController: UIViewController {
     private lazy var rainInfoLabel: UILabel = {
         let label = UILabel()
         label.text = "Rain | 26%"
+        label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -148,6 +153,8 @@ class WeatherViewController: UIViewController {
         button.layer.shadowOffset = CGSize(width: -3, height: 5)
         button.layer.shadowOpacity = 0.25
         button.layer.shadowRadius = 6
+//        button.setTitle("Weekly forecast", for: .normal)
+//        button.setImage(UIImage(named: "weatherArrowUpGray"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

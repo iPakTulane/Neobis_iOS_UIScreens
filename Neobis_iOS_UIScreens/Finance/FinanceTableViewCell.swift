@@ -10,56 +10,39 @@ import UIKit
 class FinanceTableViewCell: UITableViewCell {
 
         // MARK: -
-        private lazy var cellContainerView: UIView = {
-            let view = UIView()
-            view.backgroundColor = .clear
-    //        view.tintColor = .separator
-            view.translatesAutoresizingMaskIntoConstraints = false
-            return view
-        }()
-        private lazy var subcontainerLogoBackgroundView: UIView = {
-            let view = UIView()
-    //        view.alpha = 0.5
-            view.backgroundColor = .red
-            view.layer.cornerRadius = 20
-            view.backgroundColor = .clear
-            view.translatesAutoresizingMaskIntoConstraints = false
-            return view
-        }()
-        private lazy var subcontainerLogoImage: UIImageView = {
+        private lazy var backgroundIconImage: UIImageView = {
+            let image = UIImageView()
+            image.contentMode = .scaleAspectFit
+            image.translatesAutoresizingMaskIntoConstraints = false
+            return image
+            }()
+        private lazy var iconImage: UIImageView = {
             let image = UIImageView()
             image.contentMode = .scaleAspectFit
             image.translatesAutoresizingMaskIntoConstraints = false
             return image
         }()
-        private lazy var subcontainerDetailLabelsView: UIView = {
+        private lazy var labelsView: UIView = {
             let view = UIView()
             view.backgroundColor = .clear
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
-        private lazy var subcontainerTitleLabel: UILabel = {
+        private lazy var titleLabel: UILabel = {
             let label = UILabel()
             label.textColor = .black
             label.font = UIFont.boldSystemFont(ofSize: 20.0)
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
-        private lazy var subcontainerSubtitleLabel: UILabel = {
-            let label = UILabel()
-            label.font = UIFont.systemFont(ofSize: 12)
-            label.textColor = .lightGray
-            label.translatesAutoresizingMaskIntoConstraints = false
-            return label
-        }()
-        private lazy var subcontainerPriceLabel: UILabel = {
+        private lazy var priceLabel: UILabel = {
             let label = UILabel()
             label.font = UIFont.systemFont(ofSize: 15)
             label.textColor = .black
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
-        private lazy var subcontainerInfoLabel: UILabel = {
+        private lazy var categoryLabel: UILabel = {
             let label = UILabel()
             label.font = UIFont.systemFont(ofSize: 12)
             label.textColor = .lightGray
@@ -82,96 +65,69 @@ class FinanceTableViewCell: UITableViewCell {
         
         override func awakeFromNib() {
             super.awakeFromNib()
-            // Initialization code
         }
 
         override func setSelected(_ selected: Bool, animated: Bool) {
             super.setSelected(selected, animated: animated)
-
-            // Configure the view for the selected state
         }
         
         // MARK: -
         func setCellViewsHierarchy() {
             
-            contentView.addSubview(cellContainerView)
+            contentView.addSubview(backgroundIconImage)
+            contentView.addSubview(labelsView)
             
-            cellContainerView.addSubview(subcontainerLogoBackgroundView)
-            cellContainerView.addSubview(subcontainerDetailLabelsView)
+            backgroundIconImage.addSubview(iconImage)
             
-            subcontainerLogoBackgroundView.addSubview(subcontainerLogoImage)
-            
-            subcontainerDetailLabelsView.addSubview(subcontainerTitleLabel)
-            subcontainerDetailLabelsView.addSubview(subcontainerSubtitleLabel)
-            subcontainerDetailLabelsView.addSubview(subcontainerPriceLabel)
-            subcontainerDetailLabelsView.addSubview(subcontainerInfoLabel)
+            labelsView.addSubview(titleLabel)
+            labelsView.addSubview(priceLabel)
+            labelsView.addSubview(categoryLabel)
+
         }
         
         func setCellViewsConstraints() {
             
-            // Level 1 - cellContainerView
             NSLayoutConstraint.activate([
-            // cellContainerView
-                cellContainerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-                cellContainerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-                cellContainerView.heightAnchor.constraint(equalToConstant: 70),
-                cellContainerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-                cellContainerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            // backgroundIconImage
+                backgroundIconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                backgroundIconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+                backgroundIconImage.widthAnchor.constraint(equalToConstant: 30),
+                backgroundIconImage.heightAnchor.constraint(equalToConstant: 30),
+                
+            // iconImage
+                iconImage.centerXAnchor.constraint(equalTo: backgroundIconImage.centerXAnchor),
+                iconImage.centerYAnchor.constraint(equalTo: backgroundIconImage.centerYAnchor),
             ])
             
-            // Sublevel 1.1 -
             NSLayoutConstraint.activate([
+            // labelsView
+                labelsView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                labelsView.leadingAnchor.constraint(equalTo: backgroundIconImage.trailingAnchor, constant: 20),
+                labelsView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+                labelsView.heightAnchor.constraint(equalToConstant: 50),
                 
-            // subcontainerLogoBackgroundView
-                subcontainerLogoBackgroundView.centerYAnchor.constraint(equalTo: cellContainerView.centerYAnchor),
-                subcontainerLogoBackgroundView.leadingAnchor.constraint(equalTo: cellContainerView.leadingAnchor),
-    //            subcontainerLogoBackgroundView.widthAnchor.constraint(equalToConstant: 30),
-    //            subcontainerLogoBackgroundView.heightAnchor.constraint(equalToConstant: 30),
+            // titleLabel
+                titleLabel.centerYAnchor.constraint(equalTo: labelsView.centerYAnchor),
+                titleLabel.leadingAnchor.constraint(equalTo: labelsView.leadingAnchor),
                 
-            // subcontainerLogoImage
-                subcontainerLogoImage.centerXAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerXAnchor),
-                subcontainerLogoImage.centerYAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerYAnchor),
-                subcontainerLogoImage.widthAnchor.constraint(equalToConstant: 20),
-                subcontainerLogoImage.heightAnchor.constraint(equalToConstant: 20),
+            // priceLabel
+                priceLabel.topAnchor.constraint(equalTo: labelsView.topAnchor, constant: 5),
+                priceLabel.trailingAnchor.constraint(equalTo: labelsView.trailingAnchor),
+                
+            // categoryLabel
+                categoryLabel.bottomAnchor.constraint(equalTo: labelsView.bottomAnchor, constant: -5),
+                categoryLabel.trailingAnchor.constraint(equalTo: labelsView.trailingAnchor),
             ])
-            
-            // Sublevel 1.2 -
-            NSLayoutConstraint.activate([
-                
-            // subcontainerDetailLabelsView
-                subcontainerDetailLabelsView.centerYAnchor.constraint(equalTo: cellContainerView.centerYAnchor),
-                subcontainerDetailLabelsView.leadingAnchor.constraint(equalTo: subcontainerLogoImage.trailingAnchor, constant: 30),
-                subcontainerDetailLabelsView.trailingAnchor.constraint(equalTo: cellContainerView.trailingAnchor),
-                subcontainerDetailLabelsView.heightAnchor.constraint(equalToConstant: 80),
-                
-                // subcontainerTitleLabel
-                subcontainerTitleLabel.topAnchor.constraint(equalTo: subcontainerDetailLabelsView.topAnchor, constant: 20),
-                subcontainerTitleLabel.leadingAnchor.constraint(equalTo: subcontainerDetailLabelsView.leadingAnchor),
-                
-                // subcontainerSubtitleLabel
-                subcontainerSubtitleLabel.leadingAnchor.constraint(equalTo: subcontainerDetailLabelsView.leadingAnchor),
-                subcontainerSubtitleLabel.bottomAnchor.constraint(equalTo: subcontainerDetailLabelsView.bottomAnchor, constant: -20),
-                
-                // subcontainerPriceLabel
-                subcontainerPriceLabel.topAnchor.constraint(equalTo: subcontainerDetailLabelsView.topAnchor, constant: 20),
-                subcontainerPriceLabel.trailingAnchor.constraint(equalTo: subcontainerDetailLabelsView.trailingAnchor),
-                
-                // subcontainerInfoLabel
-                subcontainerInfoLabel.trailingAnchor.constraint(equalTo: subcontainerDetailLabelsView.trailingAnchor),
-                subcontainerInfoLabel.bottomAnchor.constraint(equalTo: subcontainerDetailLabelsView.bottomAnchor, constant: -20),
-            ])
-
         }
         
         
         // MARK: -
-        func configureCell(with data: CryptoItem) {
-            subcontainerLogoBackgroundView.backgroundColor = data.color
-            subcontainerLogoImage.image = UIImage(named: data.icon)
-            subcontainerTitleLabel.text = data.title
-            subcontainerSubtitleLabel.text = data.tendency
-            subcontainerPriceLabel.text = data.price
-            subcontainerInfoLabel.text = data.info
+        func configureCell(with data: FinanceItem) {
+            backgroundIconImage.image = UIImage(named: data.background)
+            iconImage.image = UIImage(named: data.icon)
+            titleLabel.text = data.title
+            priceLabel.text = data.price
+            categoryLabel.text = data.category
         }
         
     }

@@ -12,17 +12,16 @@ class CryptoTableViewCell: UITableViewCell {
     // MARK: -
     private lazy var cellContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .clear
+//        view.backgroundColor = .clear
 //        view.tintColor = .separator
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     private lazy var subcontainerLogoBackgroundView: UIView = {
         let view = UIView()
-//        view.alpha = 0.5
-        view.backgroundColor = .red
+        view.alpha = 0.1
+//        view.clipsToBounds = true
         view.layer.cornerRadius = 20
-        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -30,11 +29,23 @@ class CryptoTableViewCell: UITableViewCell {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
+        
+//        // Apply a brightness filter to the image
+//        if let originalImage = image.image {
+//            let brightnessFilter = CIFilter(name: "CIColorControls")
+//            brightnessFilter?.setDefaults()
+//            brightnessFilter?.setValue(originalImage, forKey: kCIInputImageKey)
+//            brightnessFilter?.setValue(1.5, forKey: kCIInputBrightnessKey) // Adjust the value as needed
+//
+//            if let brightenedImage = brightnessFilter?.outputImage {
+//                image.image = UIImage(ciImage: brightenedImage)
+//            }
+//        }
         return image
     }()
     private lazy var subcontainerDetailLabelsView: UIView = {
         let view = UIView()
-        view.backgroundColor = .clear
+//        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -99,7 +110,8 @@ class CryptoTableViewCell: UITableViewCell {
         cellContainerView.addSubview(subcontainerLogoBackgroundView)
         cellContainerView.addSubview(subcontainerDetailLabelsView)
         
-        subcontainerLogoBackgroundView.addSubview(subcontainerLogoImage)
+        cellContainerView.addSubview(subcontainerLogoImage)
+//        subcontainerLogoBackgroundView.addSubview(subcontainerLogoImage)
         
         subcontainerDetailLabelsView.addSubview(subcontainerTitleLabel)
         subcontainerDetailLabelsView.addSubview(subcontainerSubtitleLabel)
@@ -125,12 +137,15 @@ class CryptoTableViewCell: UITableViewCell {
         // subcontainerLogoBackgroundView
             subcontainerLogoBackgroundView.centerYAnchor.constraint(equalTo: cellContainerView.centerYAnchor),
             subcontainerLogoBackgroundView.leadingAnchor.constraint(equalTo: cellContainerView.leadingAnchor),
-//            subcontainerLogoBackgroundView.widthAnchor.constraint(equalToConstant: 30),
-//            subcontainerLogoBackgroundView.heightAnchor.constraint(equalToConstant: 30),
+            subcontainerLogoBackgroundView.widthAnchor.constraint(equalToConstant: 40),
+            subcontainerLogoBackgroundView.heightAnchor.constraint(equalToConstant: 40),
             
         // subcontainerLogoImage
-            subcontainerLogoImage.centerXAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerXAnchor),
-            subcontainerLogoImage.centerYAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerYAnchor),
+            subcontainerLogoImage.centerYAnchor.constraint(equalTo: cellContainerView.centerYAnchor),
+            subcontainerLogoImage.leadingAnchor.constraint(equalTo: cellContainerView.leadingAnchor, constant: 10),
+            
+//            subcontainerLogoImage.centerXAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerXAnchor),
+//            subcontainerLogoImage.centerYAnchor.constraint(equalTo: subcontainerLogoBackgroundView.centerYAnchor),
             subcontainerLogoImage.widthAnchor.constraint(equalToConstant: 20),
             subcontainerLogoImage.heightAnchor.constraint(equalToConstant: 20),
         ])
@@ -153,7 +168,7 @@ class CryptoTableViewCell: UITableViewCell {
             subcontainerSubtitleLabel.bottomAnchor.constraint(equalTo: subcontainerDetailLabelsView.bottomAnchor, constant: -20),
             
             // subcontainerPriceLabel
-            subcontainerPriceLabel.topAnchor.constraint(equalTo: subcontainerDetailLabelsView.topAnchor, constant: 20),
+            subcontainerPriceLabel.topAnchor.constraint(equalTo: subcontainerDetailLabelsView.topAnchor, constant: 23),
             subcontainerPriceLabel.trailingAnchor.constraint(equalTo: subcontainerDetailLabelsView.trailingAnchor),
             
             // subcontainerInfoLabel

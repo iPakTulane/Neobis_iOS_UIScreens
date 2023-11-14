@@ -154,11 +154,11 @@ class CryptoViewController: UIViewController {
             headerView.heightAnchor.constraint(equalToConstant: 90),
             
         // headerTitleLabel
-            headerTitleLabel.topAnchor.constraint(equalTo: headerView.topAnchor),
+            headerTitleLabel.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 10),
             headerTitleLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
             
         // headerIconImage
-            headerIconImage.topAnchor.constraint(equalTo: headerView.topAnchor),
+            headerIconImage.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 10),
             headerIconImage.trailingAnchor.constraint(equalTo: headerView.trailingAnchor),
             headerIconImage.heightAnchor.constraint(equalToConstant: 25),
             headerIconImage.widthAnchor.constraint(equalToConstant: 25),
