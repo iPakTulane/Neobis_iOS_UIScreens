@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class DetailsWeatherViewController: UIViewController {
     

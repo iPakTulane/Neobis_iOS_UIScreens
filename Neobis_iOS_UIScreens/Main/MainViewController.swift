@@ -12,7 +12,8 @@ class MainViewController: UIViewController {
     
     var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "  Neobis UI Screens"
+        label.text = "Neobis UI Screens"
+        label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false

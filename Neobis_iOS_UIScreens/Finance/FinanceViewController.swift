@@ -194,7 +194,7 @@ class FinanceViewController: UIViewController {
         tableView.backgroundColor = .clear
         tableView.register(FinanceTableViewCell.self, forCellReuseIdentifier: "FinanceTableViewCell")
         tableView.sectionFooterHeight = 10.0
-        tableView.rowHeight = 70.0 // Adjust this value to make each row taller
+        tableView.rowHeight = 70.0
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
