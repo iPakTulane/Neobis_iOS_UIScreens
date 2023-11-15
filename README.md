@@ -11,27 +11,27 @@ The app contains screens of the following screens:
 ## Library
 The Library screen provides users with a collection of digital content such as books, articles, or any other media. Users can navigate through their library, view details about each item, and perform actions like reading, downloading, or sharing content.
 
-<img width="685" alt="1" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/b5e58378-ab75-4d5c-8d85-57593546128f">
+![1](https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/1c3cba63-8440-4a50-8c2c-142db75e098b)
 
 ## Weather 
 The Weather screen displays real-time weather information based on the user's location or a selected location. Users can check current weather conditions, forecasts, and additional details such as humidity, wind speed, and precipitation. The screen may also include interactive elements for location selection or weather map viewing.
 
-<img width="688" alt="2" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/8853b263-d70b-4aa8-a93d-20366ecc545c">
+![2](https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/83dd5c22-6dea-4217-90ad-2f727d507abd)
 
 ## Finance 
 The Finance screen offers users insights into their financial status. It can include features like account balances, transaction history, budget tracking, investment portfolios, and financial goal monitoring. Users can manage and analyze their financial data in an organized and user-friendly interface.
 
-<img width="368" alt="3" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/85caf485-8b58-4e86-9098-2e4bd345da45">
+![3](https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/cb35770e-ff71-48f0-b473-23286e2e3cad)
 
 ## Travel 
 The Travel screen assists users in planning and organizing their travel experiences. It may include features like destination suggestions, itinerary planning, hotel reservations, flight information, and local recommendations. Users can explore travel options, create trip plans, and access essential travel information.
 
-<img width="386" alt="4" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/2a62210c-0490-46f3-9495-0c0a5a922dfb">
+![4](https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/8d7b9a89-21ec-47f1-b53d-a05375ddc45e)
 
 ## Crypto 
 The Crypto screen is dedicated to cryptocurrency-related information. Users can track real-time prices, view historical data, and analyze trends for various cryptocurrencies. The screen may also include features for managing cryptocurrency portfolios, setting alerts, and accessing news related to the crypto market.
 
-<img width="367" alt="5" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/d4e7d3c4-fba1-41b9-ba7d-ff4cb16edbe5">
+![5](https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/91033d89-6003-42c8-838b-b8e79171cea1)
 
 ## Project Overview
 
