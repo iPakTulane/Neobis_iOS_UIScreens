@@ -21,10 +21,12 @@ The Weather screen displays real-time weather information based on the user's lo
 ## Finance 
 The Finance screen offers users insights into their financial status. It can include features like account balances, transaction history, budget tracking, investment portfolios, and financial goal monitoring. Users can manage and analyze their financial data in an organized and user-friendly interface.
 
+<img width="311" alt="finance" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/29306ca8-01bd-4d4d-8e6a-13fe3ff37071">
+
 ## Travel 
 The Travel screen assists users in planning and organizing their travel experiences. It may include features like destination suggestions, itinerary planning, hotel reservations, flight information, and local recommendations. Users can explore travel options, create trip plans, and access essential travel information.
 
-<img width="614" alt="3" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/e82c5f6d-8adb-400e-a807-f9ab280e2cf9">
+<img width="305" alt="travel" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/55fdaa5a-3c79-4a7d-b5d0-38d1b6afa580">
 
 ## Crypto 
 The Crypto screen is dedicated to cryptocurrency-related information. Users can track real-time prices, view historical data, and analyze trends for various cryptocurrencies. The screen may also include features for managing cryptocurrency portfolios, setting alerts, and accessing news related to the crypto market.
