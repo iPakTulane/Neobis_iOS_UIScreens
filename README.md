@@ -31,7 +31,7 @@ The Travel screen assists users in planning and organizing their travel experien
 ## Crypto 
 The Crypto screen is dedicated to cryptocurrency-related information. Users can track real-time prices, view historical data, and analyze trends for various cryptocurrencies. The screen may also include features for managing cryptocurrency portfolios, setting alerts, and accessing news related to the crypto market.
 
-<img width="571" alt="4" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/9aa52836-4a1f-4256-b67d-e26f59f5b028">
+<img width="245" alt="crypto" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/33ac416f-2862-4691-b8c8-c2d027839c06">
 
 ## Project Overview
 
