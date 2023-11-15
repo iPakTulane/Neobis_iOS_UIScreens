@@ -11,12 +11,12 @@ The app contains screens of the following screens:
 ## Library
 The Library screen provides users with a collection of digital content such as books, articles, or any other media. Users can navigate through their library, view details about each item, and perform actions like reading, downloading, or sharing content.
 
-![1](https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/1c3cba63-8440-4a50-8c2c-142db75e098b)
+<img width="551" alt="1" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/34b573f9-1ad2-4350-9572-8a8affb4daf8">
 
 ## Weather 
 The Weather screen displays real-time weather information based on the user's location or a selected location. Users can check current weather conditions, forecasts, and additional details such as humidity, wind speed, and precipitation. The screen may also include interactive elements for location selection or weather map viewing.
 
-![2](https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/83dd5c22-6dea-4217-90ad-2f727d507abd)
+<img width="552" alt="2" src="https://github.com/iPakTulane/Neobis_iOS_UIScreens/assets/117035210/64b69ee1-8e09-4972-b31d-e5586437da71">
 
 ## Finance 
 The Finance screen offers users insights into their financial status. It can include features like account balances, transaction history, budget tracking, investment portfolios, and financial goal monitoring. Users can manage and analyze their financial data in an organized and user-friendly interface.
